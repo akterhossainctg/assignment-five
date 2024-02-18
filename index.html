@@ -108,7 +108,7 @@
     <div class="Button-type m-auto border-[#1DD100]">
         <h4 class="flex mt-5 text-1xl text-green-500 font-bold justify-center items-center">See All Offers</h4>
     </div>
-    <main class=" mx-auto w-[1440px] h-[2208px] bg-[#F7F8F8]">
+    <main class=" mx-auto w-[1200px] h-[1508px] bg-[#F7F8F8] rounded-t-3xl gap-10">
         <div class="">
             <h2 class="font-bold text-2xl text-center ">P.H Paribahan</h2>
             <p class="text-[#6a6b6f] text-center">Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing features allow for a streamlined .</p>
@@ -313,12 +313,15 @@
                 type="text"
                 placeholder="have a cupon ?"
               />
-              <button
+              <label class="input input-bordered flex items-center gap-2">
+                <input type="text" class="grow" placeholder="Search" />
+                <button
                 disabled
-                class="btn absolute right-2 top-2 bg-green-500 btn-sm"
+                class="btn absolute right-2 top-2 bg-green-400 btn-sm"
               >
                 Apply
               </button>
+              </label>
             </div>
 
             <div class="flex justify-between border-t-2 border-dashed">
@@ -360,17 +363,26 @@
                   required
                 />
               </div>
-              <div class="form-control mt-6">
-                <button disabled class="btn bg-green-500 text-lg font-medium">
-                  Next
-                </button>
-              </div>
+              <button disabled class="btn mt-5 bg-green-400 text-wh btn-success">
+                Next
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+  <!--success result item-->
+  <div class="hero min-h-screen bg-base-200">
+    <div class="hero-content text-center">
+      <div class="max-w-md bg-white w-[800px] h-[380px] rounded-xl">
+        <img class="m-auto" src="./images/success.png" alt="">
+        <h1 class="text-2xl mt-5 font-bold text-emerald-500">SUCCESS</h1>
+        <p class="p-7 text-xl font-medium ">Thank you for Booking Our Bus Seats. We are working hard to find the best service and deals for you. <br> <span class="text-sm text-[#bcb8b8]">Shortly you will find a confirmation in your email.</span></p>
+        <button class=" w-[300px] font-medium rounded-3xl bg-green-500 border-none text-xl text-white btn">Continue</button>
+      </div>
+    </div>
+  </div>
     </main>
    
 
