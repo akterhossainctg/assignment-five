@@ -23,10 +23,3 @@
 .font-inter{
     font-family: "Inter", sans-serif;
 }
-
-.Button-type{
-    border: 2px solid;
-    width: 188px;
-    height: 65px;
-    border-radius: 5px;
-}

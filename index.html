@@ -136,9 +136,8 @@
               class="flex items-center gap-1 bg-green-100 px-3 py-1 rounded-lg text-green-500"
             >
               <img src="./images/seat-green.png" alt="" /><span
-                id="seat-available"
-                >40</span
-              >
+                id="current-seat"
+                >40</span>
               Seat Left
             </h2>
           </div>
@@ -215,7 +214,7 @@
           </div>
 
           <div class="interface grid grid-cols-2 gap-5"></div>
-          <div id="seats" class="flex justify-between">
+          <div onclick="handleClick()" id="seats" class="flex justify-between">
             <div class="grid grid-cols-3 gap-5">
               <button id="A1" class="text-gray-500 px-10 focus:bg-green-300">A</button>
               <div id="A1" class="text-gray-500 btn px-10">A1</div>
@@ -402,6 +401,6 @@
          </nav>
          <!--footer end-->
        </footer>
-    <script src="js/connetion.js"></script>
+    <script src="js/function.js"></script>
 </body>
 </html>
