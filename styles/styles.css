@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Raleway google font */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.font-raleway{
+    font-family: "Raleway", sans-serif;
+}
+
+
+
+ /* inter  google font */
+ 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.font-inter{
+    font-family: "Inter", sans-serif;
+}
+
+.Button-type{
+    border: 2px solid;
+    width: 188px;
+    height: 65px;
+    border-radius: 5px;
+}
