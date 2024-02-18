@@ -1,3 +1,1 @@
-function handleClick(event){
-    console.log(event)
-}
+console.log('connected')
