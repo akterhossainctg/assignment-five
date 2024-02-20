@@ -1,17 +1,13 @@
-document.getElementById('seats').addEventListener('click',function(){
-    
-    let count = 40;
-    const countSeats = document.getElementById('current-seat');
-    
-    const getInnerValue = countSeats.innerText;
-    const values = parseInt(getInnerValue);
-    countSeats.innerText =values;
-    if(count === values ){
-        const countResult = count -= 1;
-        console.log(countResult);
-    }
-    else{
-        console.log('f')
-    }
-    console.log(values);
-});
+const allBtn = document.getElementsByClassName("add-btn");
+let count = 0;
+
+
+for(const btn of allBtn) {
+    btn.addEventListener("click", function (e) {
+        console.log("boss select korsi");
+        count = count + 1; 
+        document.getElementById("seat").innerText=
+        count;
+
+    });
+}
