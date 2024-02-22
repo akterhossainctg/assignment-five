@@ -26,11 +26,7 @@
 //     });
 // }
 
-// function getConvertedValue(id){
-//     const Price = document.getElementById(id).innerText;
-//     const convertedPrice = parseInt(Price);
-//     return convertedPrice;
-// }
+
 
 let totalPrice =0;
 let totalSeatCount = 0;
@@ -46,10 +42,7 @@ function handleClick(target){
         const displayCurrentSeat = document.getElementById('current-seat');
         currentSeat = currentSeat - 1;
         displayCurrentSeat.innerText=currentSeat;
-
     }
-
-
     const countSeatName = document.getElementById('Selected-containar');
     const SeatName = target.innerText;
     const ol = document.createElement("ol");
@@ -63,13 +56,78 @@ function handleClick(target){
     </div>
     `
     if(totalSeatCount <5 ){
-        
     countSeatName.appendChild(ol);
     const price = parseFloat(ol.innerText.slice(10,14));
     totalPrice = totalPrice + price;
     console.log(typeof totalPrice)
     const countTotalPrice = document.getElementById('total-price')
-    countTotalPrice.innerText=totalPrice
+    countTotalPrice.innerText=totalPrice;
     }
+    document.getElementById("apply-input-field").addEventListener("keyup", function(e){
+        const text=e.target.value;
+        console.log(text)
+        document.getElementById("apply-btn").addEventListener('click', function(){
+            if(text==="NEW15"){
+                const discount= 15/ 100 ;
+                const withDiscountAmount = totalPrice - (totalPrice * discount)
+                const discountAmount = totalPrice - withDiscountAmount;
+                const discountPrice = document.getElementById("discount-amount")
+                discountPrice.innerText= discountAmount;
+                console.log( discountAmount, totalPrice)
+                const grandPrice = document.getElementById("grand-price")
+                const totalGrandPrice = totalPrice - discountAmount;
+                grandPrice.innerText = totalGrandPrice;
+                console.log(totalGrandPrice)
+
+            }
+            else if(text==="COUPLE20"){
+                const discount= 20 / 100 ;
+                const withDiscountAmount = totalPrice - (totalPrice * discount)
+                const discountAmount = totalPrice - withDiscountAmount;
+                const discountPrice = document.getElementById("discount-amount")
+                discountPrice.innerText= discountAmount;
+                console.log( discountAmount, totalPrice);
+                const grandPrice = document.getElementById("grand-price")
+                const totalGrandPrice = totalPrice - discountAmount;
+                grandPrice.innerText = totalGrandPrice;
+                console.log(totalGrandPrice);
+           }
+
+        })
+        
+    })
+
     
 }
+
+const numberInput=document.getElementById('Number-input');
+const NextButton=document.getElementById('NextButton');
+
+numberInput.addEventListener('input',()=>{
+    if (numberInput.value.length >= 11) {
+        NextButton.disabled = false;
+        NextButton.addEventListener('click', () => {
+            window.location.href = '../modal.html';
+        });
+    } 
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function getConvertedValue(id){
+//     const Price = document.getElementById(id).innerText;
+//     const convertedPrice = parseInt(Price);
+//     return convertedPrice;
+// }
