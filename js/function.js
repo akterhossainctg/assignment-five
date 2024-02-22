@@ -107,7 +107,7 @@ numberInput.addEventListener('input',()=>{
     if (numberInput.value.length >= 11) {
         NextButton.disabled = false;
         NextButton.addEventListener('click', () => {
-            window.location.href = '../modal.html';
+            window.location.href = '../success.html';
         });
     } 
 })
